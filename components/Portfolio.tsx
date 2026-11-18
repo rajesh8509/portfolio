@@ -54,7 +54,7 @@ export default function Portfolio() {
   const [open, setOpen] = useState(false);
   const { scrollYProgress } = useScroll();
   const bar = useSpring(scrollYProgress, { stiffness: 120, damping: 24 });
-  useEffect(() => { document.documentElement.classList.toggle('dark', dark); }, [dark]);
+  useEffect(() => { document.documentElement.classList.add('dark'); }, []);
   const initials = P.name.split(' ').map((w) => w[0]).join('').slice(0, 2);
 
   return (
@@ -74,7 +74,6 @@ export default function Portfolio() {
             <li><a href={P.cv} target="_blank" rel="noreferrer" className="opacity-70 transition hover:text-indigo-500 hover:opacity-100">CV</a></li>
           </ul>
           <div className="flex items-center gap-2">
-            <button onClick={() => setDark(!dark)} aria-label="Toggle theme" className="glass rounded-xl px-3 py-1.5 text-sm">{dark ? 'WHITE Theme' : 'DARK Theme'}</button>
             <button onClick={() => setOpen(!open)} aria-label="Menu" className="glass rounded-xl px-3 py-1.5 text-sm md:hidden">{open ? '✕' : '☰'}</button>
           </div>
         </nav>
