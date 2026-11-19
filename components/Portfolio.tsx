@@ -100,7 +100,7 @@ export default function Portfolio() {
         <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.7, delay: 0.15 }} className="relative">
           <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-400 opacity-40 blur-2xl" />
           <motion.div animate={{ y: [0, -10, 0] }} transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut' }} className="glass flex h-60 w-60 items-center justify-center overflow-hidden rounded-full p-2 sm:h-80 sm:w-80">
-            <img src="/profile.jpg" alt={P.name} style={{ objectPosition: "50% 15%" }} className="h-full w-full rounded-full object-cover" />
+            <img src="/profile1.png" alt={P.name} style={{ objectPosition: "50% 15%" }} className="h-full w-full rounded-full object-cover" />
           </motion.div>
         </motion.div>
       </section>
